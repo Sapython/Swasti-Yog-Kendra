@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to Firebase Hosting</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/9.17.1/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/9.17.1/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/9.17.1/firebase-performance-compat.js"></script>
+  <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap"
+    rel="stylesheet" />
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/css/uikit.min.css" />
+</head>
+
+<body>
+  <header>
+    <aside>
+      <img src="assets/logo.png" alt="" />
+      <nav id="navigation">
+        <i onclick="openSidebar()" class="ri-close-fill toggle"></i>
+        <img src="assets/logo.png" alt="" />
+        <li><a href="#home">Home</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#testimonial">Testimonial</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#packages">Packages</a></li>
+      </nav>
+      <div onclick="openSidebar()" id="overlay"></div>
+      <div class="actions">
+        <button><i class="ri-phone-fill"></i></button>
+        <button uk-toggle="target: #modal-example" type="button" class="iconButton">Book
+          now</button>
+        <button id="menu" onclick="openSidebar()"><i class="ri-menu-line"></i></button>
+      </div>
+    </aside>
+  </header>
+  <main>
+    <section class="background" id="home">
+      <!-- <img src="assets/background.svg" alt=""> -->
+      <div class="detail">
+        <h1 data-aos="fade-up">
+          Swasti Yog Kendra <br />
+          Find Your Inner Peace
+        </h1>
+        <p data-aos="fade-up">A Place for Mindful Living</p>
+        <div class="actions">
+          <button data-aos="fade-up" class="button-outline">
+            <i class="ri-phone-fill"></i>Contact Us
+          </button>
+          <button uk-toggle="target: #modal-example" data-aos="fade-up" class="button-solid">
+            Book Now<i class="ri-arrow-right-s-line"></i>
+          </button>
+        </div>
+        <!-- <img src="./assets/header_yoga.svg" alt=""> -->
+      </div>
+    </section>
+    <section class="about" id="philosophy">
+      <div class="detail">
+        <h2 data-aos="fade-up">“Yoga is not something you do. Yoga is your natural state.”</h2>
+        <p data-aos="fade-up">
+          Imagine a place where people openly surrender to waves of change and
+          transformation. Swasti Yog Kendra means 'evolution' in Sanskrit. Join our tribe
+          and embrace personal evolution in an inspiring environment. Raise
+          your vibrations, find meaningful connection and experience
+          transformation in your daily life. Yoga is not something you do.
+          Yoga is your natural state.
+        </p>
+        <div data-aos="fade-up" class="signature">
+          <img src="assets/signature.png" alt="Signature" />
+          <p>Yaspal Arya & The Swasti Yog Team</p>
+        </div>
+      </div>
+      <img data-aos="fade-up" class="main" src="assets/pic1.png"
+        alt="Yashpal Aarya Yoga Position" />
+    </section>
+    <!-- <hr> -->
+    <section class="features">
+      <div data-aos="fade-up" class="feature">
+        <img src="assets/featureIcons/Feature8.svg" alt="" class="icon" />
+        <p>Relaxing and peaceful environment</p>
+      </div>
+      <div data-aos="fade-up" class="feature">
+        <img src="assets/featureIcons/Feature7.svg" alt="" class="icon" />
+        <p>Personalized attention and support</p>
+      </div>
+      <div data-aos="fade-up" class="feature">
+        <img src="assets/featureIcons/Feature4.svg" alt="" class="icon" />
+        <p>Experienced and certified yoga instructors</p>
+      </div>
+      <div data-aos="fade-up" class="feature">
+        <img src="assets/featureIcons/Feature1.svg" alt="" class="icon" />
+        <p>A variety of yoga practices and techniques</p>
+      </div>
+      <div data-aos="fade-up" class="feature">
+        <img src="assets/featureIcons/Feature9.svg" alt="" class="icon" />
+        <p>Stress-free and rejuvenating experience</p>
+      </div>
+      <div data-aos="fade-up" class="feature">
+        <img src="assets/featureIcons/Feature6.svg" alt="" class="icon" />
+        <p>Meditation and breathing exercises</p>
+      </div>
+      <div data-aos="fade-up" class="feature">
+        <img src="assets/featureIcons/Feature5.svg" alt="" class="icon" />
+        <p>Healthy and nutritious meals</p>
+      </div>
+      <div data-aos="fade-up" class="feature">
+        <img src="assets/featureIcons/Feature3.svg" alt="" class="icon" />
+        <p>Exciting activities and events</p>
+      </div>
+      <div data-aos="fade-up" class="feature">
+        <img src="assets/featureIcons/Feature2.svg" alt="" class="icon" />
+        <p>Accommodation options to suit your budget</p>
+      </div>
+    </section>
+    <!-- <hr /> -->
+    <section class="featureRight">
+      <div class="detail">
+        <h2 data-aos="fade-up">Overview</h2>
+        <p data-aos="fade-up">
+          Swasti Yog Kendra's 4-day yoga retreat in Rishikesh provides an
+          immersive and rejuvenating experience for attendees. During the
+          retreat, participants will have the opportunity to deepen their yoga
+          practice, connect with nature, and engage in activities that promote
+          overall wellness. The retreat includes daily yoga classes led by
+          experienced instructors, guided meditations, and nature walks.
+          Additionally, attendees will have the chance to enjoy healthy meals,
+          take part in workshops and discussions, and engage in various
+          outdoor activities.
+        </p>
+      </div>
+      <img data-aos="fade-up" class="main" src="assets/pic3.png" alt="People Doing Ganj" />
+    </section>
+    <section class="featureRight featureLeft" id="testimonial">
+      <img data-aos="fade-up" class="main" src="assets/pic4.png" alt="People Doing Ganj" />
+      <div class="detail">
+        <h2 data-aos="fade-up">Testimonial</h2>
+        <strong data-aos="fade-up">Watch videos of our guests sharing their experiences See
+          before-and-after photos of guests who have transformed their lives
+          through yoga</strong>
+        <p data-aos="fade-up">
+          The app is available in thousands of cities worldwide, so you can
+          request a ride even when you're far from home.
+        </p>
+        <button data-aos="fade-up" class="button-radial">
+          See More <i class="ri-arrow-right-s-line"></i>
+        </button>
+      </div>
+    </section>
+    <section class="teams" id="team">
+      <div class="teamImages">
+        <img data-aos="fade-up" src="https://i.pravatar.cc/300" alt="" />
+        <img data-aos="fade-up" src="https://i.pravatar.cc/300" alt="" />
+        <img data-aos="fade-up" src="https://i.pravatar.cc/300" alt="" />
+        <img data-aos="fade-up" src="https://i.pravatar.cc/300" alt="" />
+        <img data-aos="fade-up" src="https://i.pravatar.cc/300" alt="" />
+      </div>
+      <p data-aos="fade-up">
+        Watch videos of our guests sharing their experiences <br />
+        See before-and-after photos of guests who have transformed their lives
+        through yoga
+      </p>
+    </section>
+    <section class="teamsMobile" id="team">
+      <swiper-container class="mySwiper" pagination="true" effect="coverflow" autoplay="true"
+        loop="true" grab-cursor="true" centered-slides="true" slides-per-view="auto"
+        coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+        coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+        <swiper-slide>
+          <img src="https://i.pravatar.cc/300" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://i.pravatar.cc/300" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://i.pravatar.cc/300" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://i.pravatar.cc/300" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="https://i.pravatar.cc/300" />
+        </swiper-slide>
+      </swiper-container>
+    </section>
+    <section class="youtubeSlider">
+      <swiper-container class="mySwiper" pagination="true" effect="coverflow" autoplay="true"
+        loop="true" grab-cursor="true" centered-slides="true" slides-per-view="auto"
+        coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+        coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+        <swiper-slide>
+          <img src="assets/tn1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="assets/tn2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="assets/tn3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="assets/tn1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="assets/tn2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="assets/tn3.jpg" />
+        </swiper-slide>
+      </swiper-container>
+      <div class="detail">
+        <h2 data-aos="fade-up">
+          Experience <br />
+          <span>Evolution</span>
+        </h2>
+        <img data-aos="fade-up" src="assets/Arrow.svg" alt="Arrow" />
+        <p data-aos="fade-up">
+          There are several ways to join the
+          <strong>SWASTI</strong> experience <br />
+          and kick-start your powerful and lasting lifestyle.
+        </p>
+      </div>
+    </section>
+    <section class="itniary">
+      <swiper-container class="mySwiper" pagination="true" pagination-clickable="true"
+        space-between="30" effect="flip" autoplay="true" navigation="true">
+        <swiper-slide>
+          <div class="container">
+            <div class="detail">
+              <div class="text">
+                <h2>Day 1</h2>
+                <p>
+                  Workshops and lectures: The retreat includes workshops on
+                  various yoga techniques such as pranayama, Yoga Nidra, and
+                  yoga for specific conditions like stress, anxiety, or back
+                  pain. Also, lectures on yoga philosophy, such as the
+                  teachings of Patanjali's yoga sutras.
+                </p>
+              </div>
+              <img src="assets/logo.png" alt="" />
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="container">
+            <div class="detail">
+              <div class="text">
+                <h2>Day 1</h2>
+                <p>
+                  Workshops and lectures: The retreat includes workshops on
+                  various yoga techniques such as pranayama, Yoga Nidra, and
+                  yoga for specific conditions like stress, anxiety, or back
+                  pain. Also, lectures on yoga philosophy, such as the
+                  teachings of Patanjali's yoga sutras.
+                </p>
+              </div>
+              <img src="assets/logo.png" alt="" />
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="container">
+            <div class="detail">
+              <div class="text">
+                <h2>Day 2x`</h2>
+                <p>
+                  Workshops and lectures: The retreat includes workshops on
+                  various yoga techniques such as pranayama, Yoga Nidra, and
+                  yoga for specific conditions like stress, anxiety, or back
+                  pain. Also, lectures on yoga philosophy, such as the
+                  teachings of Patanjali's yoga sutras.
+                </p>
+              </div>
+              <img src="assets/logo.png" alt="" />
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="container">
+            <div class="detail">
+              <div class="text">
+                <h2>Day 1</h2>
+                <p>
+                  Workshops and lectures: The retreat includes workshops on
+                  various yoga techniques such as pranayama, Yoga Nidra, and
+                  yoga for specific conditions like stress, anxiety, or back
+                  pain. Also, lectures on yoga philosophy, such as the
+                  teachings of Patanjali's yoga sutras.
+                </p>
+              </div>
+              <img src="assets/logo.png" alt="" />
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="container">
+            <div class="detail">
+              <div class="text">
+                <h2>Day 1</h2>
+                <p>
+                  Workshops and lectures: The retreat includes workshops on
+                  various yoga techniques such as pranayama, Yoga Nidra, and
+                  yoga for specific conditions like stress, anxiety, or back
+                  pain. Also, lectures on yoga philosophy, such as the
+                  teachings of Patanjali's yoga sutras.
+                </p>
+              </div>
+              <img src="assets/logo.png" alt="" />
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="container">
+            <div class="detail">
+              <div class="text">
+                <h2>Day 1</h2>
+                <p>
+                  Workshops and lectures: The retreat includes workshops on
+                  various yoga techniques such as pranayama, Yoga Nidra, and
+                  yoga for specific conditions like stress, anxiety, or back
+                  pain. Also, lectures on yoga philosophy, such as the
+                  teachings of Patanjali's yoga sutras.
+                </p>
+              </div>
+              <img src="assets/logo.png" alt="" />
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="container">
+            <div class="detail">
+              <div class="text">
+                <h2>Day 1</h2>
+                <p>
+                  Workshops and lectures: The retreat includes workshops on
+                  various yoga techniques such as pranayama, Yoga Nidra, and
+                  yoga for specific conditions like stress, anxiety, or back
+                  pain. Also, lectures on yoga philosophy, such as the
+                  teachings of Patanjali's yoga sutras.
+                </p>
+              </div>
+              <img src="assets/logo.png" alt="" />
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="container">
+            <div class="detail">
+              <div class="text">
+                <h2>Day 1</h2>
+                <p>
+                  Workshops and lectures: The retreat includes workshops on
+                  various yoga techniques such as pranayama, Yoga Nidra, and
+                  yoga for specific conditions like stress, anxiety, or back
+                  pain. Also, lectures on yoga philosophy, such as the
+                  teachings of Patanjali's yoga sutras.
+                </p>
+              </div>
+              <img src="assets/logo.png" alt="" />
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </section>
+    <section data-aos="fade-up" class="uniqueBanner">
+      <div class="detail">
+        <h2>Overview of the yoga retreat and what makes it unique</h2>
+        <p>Descriptions of the yoga practices, meditation exercises, and other activities
+          Information about the instructors and their qualifications The benefits of yoga and why
+          it's important for mental and physical health</p>
+      </div>
+    </section>
+    <section class="contactUs">
+      <form>
+        <h2 data-aos="fade-up">Contact Us</h2>
+        <input data-aos="fade-up" placeholder="Name" type="text" id="name" />
+        <input data-aos="fade-up" placeholder="Phone Number" type="number" id="phoneNumber" />
+        <input data-aos="fade-up" placeholder="Email" type="email" id="email" />
+        <textarea data-aos="fade-up" placeholder="Message" name="" id="message" cols="30"
+          rows="6"></textarea>
+        <button data-aos="fade-up">Send <i class="ri-arrow-right-s-line"></i></button>
+      </form>
+    </section>
+    <section class="newsLetter">
+      <h2 data-aos="fade-up">Subscribe to Newsletter</h2>
+      <div class="field">
+        <input data-aos="fade-up" type="email" placeholder="Email">
+        <button data-aos="fade-up">Subscribe <i class="ri-arrow-right-s-line"></i></button>
+      </div>
+    </section>
+    <section class="packages" id="packages">
+      <div data-aos="fade-up" class="package">
+        <h2>Trainings</h2>
+        <hr>
+        <h3>This Includes</h3>
+        <ul>
+          <li>Set Dates</li>
+          <li>Challenging</li>
+          <li>Group Course</li>
+        </ul>
+        <button>Learn More <i class="ri-arrow-right-s-line"></i></button>
+      </div>
+      <div data-aos="fade-up" class="package">
+        <h2>Trainings</h2>
+        <hr>
+        <h3>This Includes</h3>
+        <ul>
+          <li>Set Dates</li>
+          <li>Challenging</li>
+          <li>Group Course</li>
+        </ul>
+        <button>Learn More <i class="ri-arrow-right-s-line"></i></button>
+      </div>
+      <div data-aos="fade-up" class="package">
+        <h2>Trainings</h2>
+        <hr>
+        <h3>This Includes</h3>
+        <ul>
+          <li>Set Dates</li>
+          <li>Challenging</li>
+          <li>Group Course</li>
+        </ul>
+        <button>Learn More <i class="ri-arrow-right-s-line"></i></button>
+      </div>
+      <div data-aos="fade-up" class="package">
+        <h2>Trainings</h2>
+        <hr>
+        <h3>This Includes</h3>
+        <ul>
+          <li>Set Dates</li>
+          <li>Challenging</li>
+          <li>Group Course</li>
+        </ul>
+        <button>Learn More <i class="ri-arrow-right-s-line"></i></button>
+      </div>
+    </section>
+    <!-- <hr> -->
+    <section class="featureRight">
+      <div class="detail">
+        <h2 data-aos="fade-up">Become a yoga teacher</h2>
+        <p data-aos="fade-up">
+          Become a certified yoga teacher and share your passion with the world. The Swasti Yog
+          Kendra Academy offers yoga teacher trainings both in-person in Thailand and online.
+          There’s nothing quite like a yoga teacher training in a tropical paradise surrounded by an
+          abundance of healthy lifestyle and like-minded community. You’ll receive a certificate
+          that allows you to teach yoga anywhere in the world. The friends you make during your
+          training will have your back as you transform from student to teacher. Become a yoga
+          teacher today and create your own dream job.
+        </p>
+        <button uk-toggle="target: #modal-example">Book Now</button>
+      </div>
+      <img data-aos="fade-up" class="main" src="assets/pic7.png" alt="People Doing Ganj" />
+    </section>
+    <footer>
+      <nav>
+        <ul data-aos="fade-up">
+          <h5>Contact Us</h5>
+          <li>Phone: +91 8165243678</li>
+          <li>Email: abc@swa.com</li>
+          <li>9851 Pennington StreetSuwanee, GA 30024</li>
+        </ul>
+        <ul data-aos="fade-up">
+          <h5>Information</h5>
+          <li>Phone: +91 8165243678</li>
+          <li>Email: abc@swa.com</li>
+          <li>9851 Pennington StreetSuwanee, GA 30024</li>
+        </ul>
+        <ul data-aos="fade-up">
+          <h5>Company</h5>
+          <li>Phone: +91 8165243678</li>
+          <li>Email: abc@swa.com</li>
+          <li>9851 Pennington StreetSuwanee, GA 30024</li>
+        </ul>
+        <div class="mail">
+          <h5 data-aos="fade-up">Subscribe To Our Newsletter</h5>
+          <div class="field">
+            <input data-aos="fade-up" type="email" placeholder="Email">
+            <button data-aos="fade-up"><i class="ri-arrow-right-s-line"></i></button>
+          </div>
+          <p>Hello, we are Lift Media. Our goal is to translate the positive effects from
+            revolutionizing how companies engage with their clients & their team.</p>
+        </div>
+      </nav>
+      <hr>
+      <aside>
+        <ul>
+          <li>Terms</li>
+          <li>Privacy</li>
+          <li>Cookies</li>
+        </ul>
+        <div class="social">
+          <button><i class="ri-facebook-fill"></i></button>
+          <button><i class="ri-linkedin-fill"></i></button>
+          <button><i class="ri-youtube-fill"></i></button>
+        </div>
+      </aside>
+    </footer>
+  </main>
+  <div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+      <div id="bookingDialog">
+        <form>
+          <h2 class="uk-modal-title">Booking</h2>
+          <input type="text" placeholder="Full Name">
+          <input type="text" placeholder="Phone Number">
+          <input type="text" placeholder="Email">
+          <textarea name="message" id="message"></textarea>
+          <div class="actions">
+            <button class="button-solid" type="submit">Book Now</button>
+            <button class="uk-modal-close button-outline" type="submit">Cancel</button>
+          </div>
+        </form>
+        <img src="assets/model (1).jpg" alt="Yoga">
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/js/uikit-icons.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

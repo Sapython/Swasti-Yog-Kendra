@@ -1,0 +1,10 @@
+main {
+  min-height: 200vh;
+}
+main section.banner {
+  background-image: url("assets/100Hour.png");
+  height: 40vh;
+  width: 100vw;
+}
+
+/*# sourceMappingURL=hunderedHour.css.map */
